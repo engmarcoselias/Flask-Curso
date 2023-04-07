@@ -70,3 +70,13 @@ https://www.youtube.com/watch?v=9SbUPqKEWcY&list=PLnDvRpP8Bnezalesxa3xu2yt-zWpsS
 Ferramenta para estrutura de banco de dados:
 
 https://ondras.zarovi.cz/sql/demo/?keyword=default
+
+-----------------------------------------------------------------
+
+-------------------Jinja para Tamplates-----------------------------------------
+
+Site:
+https://jinja.palletsprojects.com/en/3.1.x/
+
+Query String:
+https://www.devmedia.com.br/conceitos-e-exemplo-pratico-usando-querystring/18094

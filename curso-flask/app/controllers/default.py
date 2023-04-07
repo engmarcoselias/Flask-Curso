@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, redirect, url_for,request,abort
+from flask import Flask, redirect, url_for,request,abort,render_template
 from json import dumps
 
 
@@ -70,3 +70,24 @@ def loguin():
 @app.route('/sucesso')
 def sucesso():
     return 'Sucesso'
+
+#==Rota para templates modelo=================
+
+@app.route('/modelo')
+def modelo():
+    x = 10
+    y = 10
+    query = request.args.to_dict()
+    return render_template('modelo.html',x=x, y=y, query=query)
+
+@app.route('/dados')
+def dados():
+    return render_template('dados.html')
+
+#=====Rota exemplo dados de um templaite para outro====
+
+@app.route('/calculo',methods=['GET','POST'])
+def calculo():
+    total = sum([int(v) for v in request.form.to_dict().values()])#somando usando a função sum, convertendo para inteiro um valor de string
+    str(total)
+    return render_template('calculo.html', total=total)

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Notas</title>
+</head>
+<body>
+    <h1>Boletin</h1>
+
+    <form action="http://localhost:8000/calculo" method="post">
+    {% for x in range(4) %}
+    <p><input type="number" min="0" max="25" name="nota{{x}}" id="nota{{x}}" placeholder="Nota" required>
+    </p>
+    {% endfor %}
+    <p>
+        <button type="submit">Enviar</button>
+    </p>
+    </form>
+</body>
+</html>
