@@ -1,5 +1,5 @@
 from app import app
-from flask import Flask, redirect, url_for,request,abort,render_template
+from flask import Flask, redirect, url_for,request,abort,render_template,make_response, session
 from json import dumps
 
 
@@ -91,3 +91,45 @@ def calculo():
     total = sum([int(v) for v in request.form.to_dict().values()])#somando usando a função sum, convertendo para inteiro um valor de string
     str(total)
     return render_template('calculo.html', total=total)
+
+#=============Criando cookies========================
+
+@app.route('/cookiesindex')
+def cookies_index():
+    return render_template('cookies.html')
+
+@app.route('/setcookie', methods=['GET','POST'])
+def setcookie():
+    resp = make_response(render_template('setcookie.html'))
+    if request.method == 'POST':
+        dados = request.form['c']
+        resp.set_cookie('testeCookie', dados)
+    return resp
+
+@app.route('/getcookie')
+def getcookies():
+    cookieName = request.cookies.get('testeCookie')
+    return '<h1>Valor cookie é {}</h1>'.format(cookieName)
+
+#=======================================================
+
+#===============Manipulando seções======================
+
+@app.route('/sessionindex')
+def session_index():
+    username = ''
+    if 'username' in session:
+        username = session['username']
+    return render_template('session.html', username=username)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST' and request.form['username'] != '':
+        session['username'] = request.form['username']
+        return redirect(url_for('session_index'))
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('session_index'))
