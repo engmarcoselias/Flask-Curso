@@ -24,6 +24,10 @@ https://www.alura.com.br/artigos/ambientes-virtuais-em-python?gclid=EAIaIQobChMI
 Video:
 https://www.youtube.com/watch?v=m1TYpvIYm74
 
+SQL Alchemy:
+
+https://docs.sqlalchemy.org/en/20/intro.html#installation
+
 
 Estudos:
 
