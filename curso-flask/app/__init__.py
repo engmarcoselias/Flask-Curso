@@ -2,13 +2,12 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 
-app = Flask(__name__,static_folder='static', template_folder='templates')
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///app.sqlite3"
 db = SQLAlchemy(app)
-app.secret_key = "123456"
 
-
-from app.controllers import default
-
+with app.app_context():
+    db.create_all()
 
 
 

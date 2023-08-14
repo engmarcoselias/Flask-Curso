@@ -26,8 +26,7 @@ https://www.youtube.com/watch?v=m1TYpvIYm74
 
 SQL Alchemy:
 
-https://docs.sqlalchemy.org/en/20/intro.html#installation
-
+https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/
 
 Estudos:
 
@@ -58,6 +57,8 @@ Software:
 -Testes de requisição:
 https://httpie.io/
 
+
+-------------------------------------------------------------------------
 -Instalação de pacotes no windows
 https://chocolatey.org/
 
@@ -68,6 +69,14 @@ https://chocolatey.org/
 
 Vieo:
 https://www.youtube.com/watch?v=9SbUPqKEWcY&list=PLnDvRpP8Bnezalesxa3xu2yt-zWpsSk
+
+
+
+--------------------BANCO DE DADOS E SQL-------------------------------
+
+--ORM:
+
+https://www.devmedia.com.br/orm-object-relational-mapper/19056#:~:text=ORM%20ou%20mapeador%20objeto%20relaciona,objetos%20e%20o%20mundo%20relacional.&text=ORM%20(Object%20Relational%20Mapper)%20%C3%A9,dados%20que%20os%20mesmos%20representam.
 
 
 
@@ -84,3 +93,5 @@ https://jinja.palletsprojects.com/en/3.1.x/
 
 Query String:
 https://www.devmedia.com.br/conceitos-e-exemplo-pratico-usando-querystring/18094
+
+
