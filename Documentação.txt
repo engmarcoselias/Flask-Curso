@@ -28,6 +28,12 @@ SQL Alchemy:
 
 https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/
 
+Flask-Migrate:
+
+https://flask-migrate.readthedocs.io/en/latest/#example
+
+
+
 Estudos:
 
 -Protocolo HTTP
